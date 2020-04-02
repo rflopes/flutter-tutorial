@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tutorial/my-button.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,7 +33,17 @@ class TutorialHome extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('Hello, world!'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Hello, world!'),
+            MyButton(
+              onTapped: () {
+                print('Button tapped');
+              },
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         tooltip: 'Add',
